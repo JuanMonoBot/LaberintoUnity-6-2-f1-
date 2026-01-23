@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SalidaFinal : MonoBehaviour
 {
-    public ResetSalir ui; // Referencia al script ResetSalir
+    public UI_Menu ui; // Referencia al script ResetSalir
     public string playerTag = "Player"; // Tag del jugador
     public bool once = true; // Si es true, desactiva el trigger tras la primera activación
 

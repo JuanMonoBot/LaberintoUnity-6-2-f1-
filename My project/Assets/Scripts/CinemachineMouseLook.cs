@@ -1,51 +1,60 @@
 using UnityEngine;
 using Unity.Cinemachine; // namespace de Cinemachine
+using UnityEngine.InputSystem;
 
-public class CinemachineMouseLook : MonoBehaviour
+public class CinemachineLookInputSystem : MonoBehaviour
 {
     [Header("Referencias a Cinemachine")]
     public Transform playerBody;    // Referencia al cuerpo del jugador
     public CinemachineCamera cineCam;  // Referencia a la cámara Cinemachine
 
+    [Header("Input Actions")]
+    [SerializeField] private InputActionReference look; // Acción de mirar
+
     [Header("Sensibilidad del ratón")]
-    public float mouseSensitivity = 100f; // Sensibilidad del ratón
-    public float minPitch = -45f;      // Ángulo mínimo de pitch
-    public float maxPitch = 75f;       // Ángulo máximo de pitch
+    public float sensitivity = 0.1f; // Sensibilidad del ratón
+    public float minPitch = -80f;      // Ángulo mínimo de pitch
+    public float maxPitch = 80f;       // Ángulo máximo de pitch
 
-    private float pitch; // Rotación vertical acumulada
-
-    private void Start()
+    private float pitch = 0f; // Rotación vertical acumulada
+    private void OnEnable()
     {
-        // Bloquear el cursor al centro de la pantalla
-        Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        if (look != null)
+            look.action.Enable();
     }
 
-    void Update()
+    private void OnDisable()
     {
-        // Lee el mouse (Imput Manager clásico)
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
+        if (look != null)
+            look.action.Disable();
+    }
 
-        // 1) Girar el cuerpo del jugador en el eje Y (izquierda/derecha)
-        if (playerBody != null)
-        {
-            playerBody.Rotate(0f, mouseX* mouseSensitivity * Time.deltaTime, 0f);
-        }
+    private void LateUpdate()
+    {
+        if (look == null || cineCam == null || playerBody == null)
+            return;
 
-        // 2) Girar la cámara en el eje X (arriba/abajo)
-        pitch -= mouseY * mouseSensitivity * Time.deltaTime;
+        // Leer delta del mouse / stick derecho
+        Vector2 delta = look.action.ReadValue<Vector2>();
+        Debug.Log("Look delta: " + delta);
+
+        float yawDelta = delta.x * sensitivity;
+        float pitchDelta = delta.y * sensitivity;
+
+        // 1) Girar el player en Y (izq/der)
+        playerBody.Rotate(0f, yawDelta, 0f);
+
+        // 2) Pitch de la cámara (arriba/abajo)
+        pitch -= pitchDelta;
         pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
-        // 3) Aplicar la rotación a la cámara Cinemachine
-        if (cineCam != null)
-        {
-            Transform t = cineCam.transform;
-
-            Vector3 euler = t.localEulerAngles;
-            euler.x = pitch;
-            euler.z = 0f; // Sin inclinación lateral
-        }
+        // 3) Aplicar BOTH: pitch + yaw del player a la cámara
+        Transform t = cineCam.transform;
+        Vector3 euler = t.eulerAngles;
+        euler.x = pitch;
+        euler.y = playerBody.eulerAngles.y; // Igual que el player
+        euler.z = 0f;
+        t.eulerAngles = euler;
     }
 }
 
