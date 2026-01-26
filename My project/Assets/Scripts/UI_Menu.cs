@@ -69,8 +69,13 @@ public class UI_Menu : MonoBehaviour
         {
             doorSwitch.ResetSwitch();
         }
+
+        // 6) Resetear vida del jugador
+        PlayerHealth health = Object.FindFirstObjectByType<PlayerHealth>();
+        if (health != null)
+            health.ResetHealth();
     }
-    
+
 
     public void ShowDoorPopup(string message)
     {
