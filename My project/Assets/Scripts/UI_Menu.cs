@@ -56,7 +56,7 @@ public class UI_Menu : MonoBehaviour
         // Reactivamos el CharacterController
         if (cc) cc.enabled = true;
 
-        // 4) Restablecer puertas e interruptores
+        // 4) Restablecer puertas
         Door[] doors = Object.FindObjectsByType<Door>(FindObjectsSortMode.None);
         foreach (Door door in doors)
         {

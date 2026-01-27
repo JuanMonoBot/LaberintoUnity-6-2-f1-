@@ -223,7 +223,7 @@
                 {
                     "name": "RightStick",
                     "id": "b41aa678-e160-4b2b-9132-0af1e71b04be",
-                    "path": "2DVector",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -234,7 +234,18 @@
                 {
                     "name": "Down",
                     "id": "b831e84d-28e4-4d1d-aeaa-04080060f7c7",
-                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/rz",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/RZ-1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "feacb9e8-b33f-4d35-8e2f-3a3b4a871c2e",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/Z1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -244,19 +255,8 @@
                 },
                 {
                     "name": "Up",
-                    "id": "feacb9e8-b33f-4d35-8e2f-3a3b4a871c2e",
-                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
                     "id": "e84c8409-8e34-4f9c-bfa2-92c31de1f7e4",
-                    "path": "",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/rz",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -265,9 +265,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "right",
+                    "name": "Left",
                     "id": "6490f5b7-d312-4cf6-b1f5-570226c5a4d5",
-                    "path": "",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/Z-1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

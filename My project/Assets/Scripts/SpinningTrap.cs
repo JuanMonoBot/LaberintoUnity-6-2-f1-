@@ -22,9 +22,7 @@ public class SpinningTrap : MonoBehaviour
     [Tooltip("Si es true, gira en sentido horario; si es false, en sentido antihorario")]
     public bool clockwise = true;
 
-    //[Header("Daño al jugador")]
-    [Tooltip("Cantidad de daño que inflige la trampa al jugador")]
-
+    
     private void Start()
     {
         if (bladesRotating == null)

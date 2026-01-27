@@ -41,6 +41,6 @@ public class Door : MonoBehaviour
         // Vuelve a la posición cerrada
         isOpen = false;
         targetPosition = closedPosition;
-        transform.position = closedPosition; // Reresa inmediatamente a la posición cerrada
+        transform.position = closedPosition; // Regresa inmediatamente a la posición cerrada
     }
 }

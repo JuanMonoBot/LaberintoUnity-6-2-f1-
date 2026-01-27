@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         // Movimieto horizontal con Input Actions (x = izq/der, y = adelante/atrás)
         Vector3 movelocal = new Vector3(rawMove.x, 0f, rawMove.y) * moveSpeed;
 
-        // Conertir  espacio mundo según hacia dónde mira el jugador
+        // Convertir  espacio mundo según hacia dónde mira el jugador
         Vector3 moveWorld = transform.TransformDirection(movelocal);
 
         // Gravedad y salto

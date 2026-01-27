@@ -13,8 +13,8 @@ public class CinemachineLookInputSystem : MonoBehaviour
 
     [Header("Sensibilidad del ratón")]
     public float sensitivity = 0.1f; // Sensibilidad del ratón
-    public float minPitch = -80f;      // Ángulo mínimo de pitch
-    public float maxPitch = 80f;       // Ángulo máximo de pitch
+    public float minPitch = -80f;      // Ángulo mínimo de rotación de la camara
+    public float maxPitch = 80f;       // Ángulo máximo de rotación de la camara
 
     private float pitch = 0f; // Rotación vertical acumulada
     private void OnEnable()

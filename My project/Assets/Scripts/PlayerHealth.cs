@@ -57,9 +57,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 // Apagar el componente Image
                 lifeImages[i].enabled = shouldBeVisible;
-
-                // Opción B (alternativa): apagar todo el GameObject
-                // lifeImages[i].gameObject.SetActive(shouldBeVisible);
+                                
             }
         }
     }
