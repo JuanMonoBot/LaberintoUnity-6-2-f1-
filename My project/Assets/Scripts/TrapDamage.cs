@@ -14,7 +14,7 @@ public class TrapDamage : MonoBehaviour
         if (health != null)
         {
             health.TakeDamage(damage);
-            Debug.Log("La trampa ha golpeado al jugador, vida restante: " + health.CurrentHearts);
+            //Debug.Log("La trampa ha golpeado al jugador, vida restante: " + health.CurrentHearts);
         }
     }
 }

@@ -36,7 +36,7 @@ public class CinemachineLookInputSystem : MonoBehaviour
 
         // Leer delta del mouse / stick derecho
         Vector2 delta = look.action.ReadValue<Vector2>();
-        Debug.Log("Look delta: " + delta);
+        //Debug.Log("Look delta: " + delta);
 
         float yawDelta = delta.x * sensitivity;
         float pitchDelta = delta.y * sensitivity;

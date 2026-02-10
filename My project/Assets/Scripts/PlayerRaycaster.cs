@@ -85,8 +85,8 @@ public class PlayerRaycaster : MonoBehaviour
         }
 
         // Debug para ver qué estamos golpeando
-        Debug.Log("Raycast hit: " + hit.collider.name);
-        Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 1f);
+        //Debug.Log("Raycast hit: " + hit.collider.name);
+        //Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 1f);
                 
     }
     

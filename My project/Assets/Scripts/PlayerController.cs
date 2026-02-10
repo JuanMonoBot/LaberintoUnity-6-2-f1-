@@ -93,15 +93,15 @@ public class PlayerController : MonoBehaviour
     private void __OnMove(InputAction.CallbackContext ctx)
     {
         rawMove = ctx.ReadValue<Vector2>();
-        Debug.Log(ctx.control.device.name);
-        Debug.Log("Input recibido: " + rawMove);
+        //Debug.Log(ctx.control.device.name);
+        //Debug.Log("Input recibido: " + rawMove);
     }
     
     private void __OnJump(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
             mustJump = true;
-        Debug.Log(ctx.control.device.name);
+        //Debug.Log(ctx.control.device.name);
     }  
      
 }

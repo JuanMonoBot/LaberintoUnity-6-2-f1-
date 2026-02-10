@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 2944464581442706384}
   - component: {fileID: 7854575087085085860}
   - component: {fileID: 7598457743655268842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Riel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.13, y: 0, z: 147.1}
-  m_LocalScale: {x: 6.7, y: 6.7, z: 6.7}
+  m_LocalScale: {x: 6.9000006, y: 6.9000006, z: 6.9000006}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8844259700224879220}
