@@ -17587,18 +17587,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4042ffe8f632e0b44807e34f40ae2980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  waypoints: []
-  player: {fileID: 0}
-  anim: {fileID: 0}
-  waitTime: 2
-  viewRadius: 8
-  viewAngle: 90
-  eyeHeight: 1.7
+  waypoints:
+  - {fileID: 1155054898}
+  - {fileID: 1279964739}
+  - {fileID: 1605993711}
+  player: {fileID: 766832564}
+  anim: {fileID: 1588604670}
+  waitAtPoint: 5
+  viewRadius: 800
+  viewAngle: 360
+  eyeHeight: 0.2
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
-  timeToStartChase: 1.5
-  searchDuration: 3
+    m_Bits: 8
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  timeToStartChase: 2
+  searchDuration: 5
+  debugVision: 1
+--- !u!95 &1588604670 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3564b371d0d6ce647afb6440030d4f4f, type: 3}
+  m_PrefabInstance: {fileID: 1745811203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1589679838
 PrefabInstance:
   m_ObjectHideFlags: 0

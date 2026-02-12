@@ -90,7 +90,7 @@ public class EnemyPatrol : MonoBehaviour
         if (anim != null)
         {
             anim.SetBool("isWalking", isWalking);
-            Debug.Log("isWalking =" + isWalking);
+          //Debug.Log("isWalking =" + isWalking);
         }
     }
 }
