@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
     public Transform player;      // Referencia al jugador
     public Animator anim;         // Referencia al Animator del enemigo
 
-    private NavMeshAgent agent;   // Referencia al NavMeshAgent del enemigo
+    NavMeshAgent agent;   // Referencia al NavMeshAgent del enemigo
 
     [Header("Patrulla")]
     public float waitAtPoint = 2f; // Tiempo de espera en cada punto de patrulla
