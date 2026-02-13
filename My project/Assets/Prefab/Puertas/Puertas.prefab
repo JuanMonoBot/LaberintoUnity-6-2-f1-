@@ -632,10 +632,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3702523448182640658, guid: 9b0d865f11812394d96312963428e7d9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3147086668165024369, guid: 9b0d865f11812394d96312963428e7d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e1414013337d912438cde10b714538a1, type: 2}
+    - target: {fileID: -2586837052074400480, guid: 9b0d865f11812394d96312963428e7d9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 40060563967627381, guid: 9b0d865f11812394d96312963428e7d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -643,6 +651,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b0d865f11812394d96312963428e7d9, type: 3}
       propertyPath: m_Name
       value: Puertas
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b0d865f11812394d96312963428e7d9, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
