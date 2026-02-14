@@ -1,16 +1,22 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
-    private float currentHealth;
 
-    public Image healthBar;
+    float currentHealth;
+
+    public Image healthFill;
+
+    // 🔹 Se ejecuta antes que Start
+    void Awake()
+    {
+        currentHealth = maxHealth;
+    }
 
     void Start()
     {
-        currentHealth = maxHealth;
         UpdateBar();
     }
 
@@ -18,19 +24,25 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        Debug.Log("Vida actual: " + currentHealth); // Para comprobar
+
         UpdateBar();
 
         if (currentHealth <= 0)
+        {
             Die();
+        }
     }
 
     void UpdateBar()
     {
-        healthBar.fillAmount = currentHealth / maxHealth;
+        healthFill.fillAmount = currentHealth / maxHealth;
     }
 
     void Die()
     {
+        Debug.Log("Enemigo eliminado");
         Destroy(gameObject);
     }
 }
