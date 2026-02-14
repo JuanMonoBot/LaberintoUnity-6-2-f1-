@@ -1,39 +1,18 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class AtaqueJugador : MonoBehaviour
 {
-    public float damage = 25f;
-    public float range = 100f;
-
-    Camera cam;   // 👈 DECLARADA AQUÍ
-
-    void Start()
-    {
-        cam = Camera.main;   // 👈 ASIGNADA AQUÍ
-    }
+    public EnemyHealth enemy; // referencia al enemigo
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            Shoot();
-        }
-    }
-
-    void Shoot()
-    {
-        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, range))
-        {
-            Debug.Log("Golpeó a: " + hit.transform.name);
-
-            EnemyHealth enemy = hit.transform.GetComponentInParent<EnemyHealth>();
+            Debug.Log("Tecla P detectada");
 
             if (enemy != null)
             {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(20f);
             }
         }
     }
